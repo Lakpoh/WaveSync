@@ -1,0 +1,13 @@
+{
+  "name": "mon-projet",
+  "version": "1.0.0",
+  "scripts": {
+    "watch": "node watch.js",
+    "watch:debug": "node watch.js --debug"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "dotenv": "^16.0.3",
+    "node-scp": "^0.0.22"
+  }
+}
