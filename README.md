@@ -123,10 +123,4 @@ MIT License - voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ## 👨‍💻 Auteur
 
-Votre Nom - [@votre-twitter](https://twitter.com/votre-twitter)
-
-## 🙏 Remerciements
-
-- Inspiré par les besoins réels des développeurs web
-- Basé sur des outils Node.js performants
-- Construit avec ❤️ pour la communauté des développeurs
+Remi Twardowski
