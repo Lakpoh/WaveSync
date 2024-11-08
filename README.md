@@ -15,7 +15,7 @@ Un outil léger et élégant de synchronisation SFTP en temps réel pour les dé
 
 ```bash
 # Cloner le projet
-git clone https://github.com/votre-username/wavesync.git
+git clone https://github.com/Lakpoh/WaveSync.git
 
 # Installer les dépendances
 cd wavesync
