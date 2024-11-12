@@ -77,18 +77,6 @@ async function deleteFile(client, localFile) {
     }
 }
 
-// Initialisation : création de la structure de base
-async function initializeRemoteStructure(client) {
-    console.log('🏗️  Initialisation de la structure distante...');
-    await ensureRemoteDirectory(client, remotePath);
-    const baseDirs = ['includes', 'assets/css', 'assets/js', 'templates', 'languages'];
-    
-    for (const dir of baseDirs) {
-        await ensureRemoteDirectory(client, path.posix.join(remotePath, dir));
-    }
-    console.log('✨ Structure distante initialisée');
-}
-
 // Démarrage du watcher
 async function startWatcher() {
     console.log('🔄 Démarrage avec les paramètres:');
@@ -96,11 +84,7 @@ async function startWatcher() {
     console.log(`🌐 Dossier distant: ${remotePath}`);
     
     const client = await createClient();
-    console.log('🔌 Connecté au serveur SFTP');
-
-    // Initialise la structure distante
-    await initializeRemoteStructure(client);
-    
+    console.log('🔌 Connecté au serveur SFTP');    
     console.log('👀 Surveillance des modifications...');
 
     // Configuration du watcher

@@ -77,18 +77,6 @@ ignored: [
 ]
 ```
 
-### Structure de base
-Modifiez la fonction `initializeRemoteStructure` pour définir vos dossiers de base :
-
-```javascript
-const baseDirs = [
-    'includes',
-    'assets/css',
-    'assets/js',
-    // Ajoutez vos dossiers ici
-];
-```
-
 ## 🛡️ Sécurité
 
 - Ne jamais commiter le fichier `.env`
