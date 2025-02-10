@@ -33,14 +33,11 @@ SFTP_USER=votre-username
 SFTP_PASSWORD=votre-password
 # Ou utilisez une clé SSH (recommandé)
 # SFTP_KEY_PATH=/chemin/vers/votre/cle_privee
+LOCAL_PATH=./src/votre-projet
+REMOTE_PATH=/chemin/distant/sur/le/serveur
 ```
 
-2. Modifiez les chemins dans `watch.js` selon vos besoins :
-
-```javascript
-const localPath = './src/votre-projet';
-const remotePath = '/chemin/distant/sur/le/serveur';
-```
+Les chemins `LOCAL_PATH` et `REMOTE_PATH` définissent respectivement le dossier local à surveiller et le dossier distant où synchroniser les fichiers.
 
 ## 🏃‍♂️ Utilisation
 

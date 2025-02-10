@@ -12,8 +12,8 @@ const config = {
 };
 
 // Chemins modifiés
-const localPath = path.resolve('./src/mon-projet');
-const remotePath = '/www/mon-projet'; // Chemin simplifié
+const localPath = path.resolve(process.env.LOCAL_PATH);
+const remotePath = process.env.REMOTE_PATH;
 
 // Création du client SCP
 async function createClient() {
@@ -44,6 +44,19 @@ async function ensureRemoteDirectory(client, remotePath) {
     }
 }
 
+// Fonction pour formater la date
+function getFormattedDate() {
+    const date = new Date();
+    return date.toLocaleString('fr-FR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+}
+
 // Fonction pour uploader un fichier
 async function uploadFile(client, localFile) {
     const relativePath = path.relative(localPath, localFile);
@@ -56,9 +69,9 @@ async function uploadFile(client, localFile) {
         
         // Upload du fichier
         await client.uploadFile(localFile, remoteFile);
-        console.log(`✅ Synchronisé: ${relativePath}`);
+        console.log(`[${getFormattedDate()}] ✅ Synchronisé: ${relativePath}`);
     } catch (error) {
-        console.error(`❌ Erreur upload ${relativePath}:`, error);
+        console.error(`[${getFormattedDate()}] ❌ Erreur upload ${relativePath}:`, error);
     }
 }
 
@@ -69,10 +82,10 @@ async function deleteFile(client, localFile) {
     
     try {
         await client.unlink(remoteFile);
-        console.log(`🗑️  Supprimé: ${relativePath}`);
+        console.log(`[${getFormattedDate()}] 🗑️  Supprimé: ${relativePath}`);
     } catch (error) {
         if (error.code !== 2) {
-            console.error(`❌ Erreur suppression ${relativePath}:`, error);
+            console.error(`[${getFormattedDate()}] ❌ Erreur suppression ${relativePath}:`, error);
         }
     }
 }

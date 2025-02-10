@@ -1,6 +1,6 @@
 {
-  "name": "mon-projet",
-  "version": "1.0.0",
+  "name": "wave-sync",
+  "version": "1.0.1",
   "scripts": {
     "watch": "node watch.js",
     "watch:debug": "node watch.js --debug"
