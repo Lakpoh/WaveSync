@@ -104,7 +104,7 @@ Les contributions sont les bienvenues ! N'hésitez pas à :
 
 ## 📜 Licence
 
-MIT License - voir le fichier [LICENSE](LICENSE) pour plus de détails.
+MIT License - voir le fichier [LICENSE](LICENSE.md) pour plus de détails.
 
 ## 👨‍💻 Auteur
 
