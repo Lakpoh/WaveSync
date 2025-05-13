@@ -1,6 +1,6 @@
 # 🌊 WaveSync
 
-Un outil léger et élégant de synchronisation SFTP en temps réel pour les développeurs web. Idéal pour le développement WordPress et autres projets web nécessitant une synchronisation continue avec un serveur distant.
+Un outil léger de synchronisation SFTP en temps réel pour les développeurs web. Idéal pour le développement WordPress et autres projets web nécessitant une synchronisation continue avec un serveur distant.
 
 ## ✨ Caractéristiques
 
